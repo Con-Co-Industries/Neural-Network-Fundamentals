@@ -9,6 +9,7 @@ This is a command line application. When starting the program, the user has thre
 2. Load a pre-trained network
 
 Once a network is present in, the user has 8 options in total:
+
 0. Quit
 1. Generate and train a new network
 2. Load a pre-trained network
@@ -44,4 +45,15 @@ Once you press 2, you will be asked for the name of the file. The program only t
 ### Saving the network to a file
 **NOTE: You need to have either trained a network or loaded a network for this option to be avaliable**
 
-Press 3 to save the current network state to a .csv file.
+Press 3 to save the current network state to a .csv file. 
+
+Once you press 3, you will be asked for the name of the file. The program only takes .csv files, so you don't need to put the extension at the end of the name. If you leave it it blank, it will name the file "neural_network.csv" by default. **WARNING: The code *will* overwrite exisiting files**.
+
+**NOTE: The program is only able to save files in the same directory as the main file, if you try to specify a different directory it will fail**
+
+Each layer conists of two matricies: a weights matrix and a biases matrix for that layer. Thus, there are 4 matricies that need to be saved for this code. The way the saving works is that each value in any given matrix is put in its own column, all on one line. The next matrix is saved on the next line.
+
+### Display network accuracy
+**NOTE: You need to have either trained a network or loaded a network for this option to be avaliable**
+Press 4 to display the network accuracy on the **training** data.
+Press 5 to display the network accuracy on the **testing** data.
